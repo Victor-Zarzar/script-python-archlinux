@@ -75,7 +75,11 @@ commands = [
     "mkdir -p ~/Projects",
     "mkdir -p ~/development",
     "git config --global user.name 'victorzarzar'",
-    "git config --global user.email 'victor@example.com'"
+    "git config --global user.email 'victor@example.com'",
+    "curl -fsSL https://fvm.app/install.sh | bash",
+    "yay -S --noconfirm sqlite",
+    "yay -S --noconfirm starship",
+    "yay -S --noconfirm zsh-autosuggestions"
 ]
 
 for cmd in commands:
