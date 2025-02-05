@@ -36,6 +36,7 @@ commands = [
     "sudo snap install notion-snap-reborn",
     "sudo snap install trello-desktop",
     "sudo snap install whatsapp-linux-app",
+    "sudo snap install deepseek-desktop"
     "yay -S --noconfirm flatpak",
     "yay -S --noconfirm npm",
     "yay -S --noconfirm pnpm",
@@ -67,6 +68,7 @@ commands = [
     "yay -S --noconfirm automake",
     "yay -S --noconfirm ninja",
     "yay -S --noconfirm clang",
+    "curl -fsSL https://ollama.com/install.sh | sh"
     "flatpak install -y flathub org.libreoffice.LibreOffice",
     "flatpak install -y flathub io.github.thetumultuousunicornofdarkness.cpu-x",
     "flatpak install -y flathub com.github.jeromerobert.pdfarranger",
