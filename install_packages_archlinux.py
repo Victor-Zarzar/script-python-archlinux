@@ -2,10 +2,10 @@ import subprocess
 
 def run_command(command):
     try:
-        print(f"Executing: {command}")
+        print(f"🔹 Executando: {command}")
         subprocess.run(command, shell=True, check=True)
     except subprocess.CalledProcessError as e:
-        print(f"Error executing {command}: {e}")
+        print(f"❌ Erro ao executar {command}: {e}")
 
 commands = [
     "sudo pacman -Sy --noconfirm",
@@ -77,7 +77,11 @@ commands = [
     "mkdir -p ~/Projects",
     "git config --global user.name 'victorzarzar'",
     "git config --global user.email 'victor@example.com'",
-    "curl -fsSL https://fvm.app/install.sh | bash",
+    "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"",
+    "echo 'eval \"$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)\"' >> ~/.bashrc",
+    "eval \"$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)\"",
+    "brew tap leoafarias/fvm",
+    "brew install fvm",
     "yay -S --noconfirm sqlite",
     "yay -S --noconfirm mysql",
     "yay -S --noconfirm starship",
@@ -86,3 +90,5 @@ commands = [
 
 for cmd in commands:
     run_command(cmd)
+
+print("\n✅ Configuração concluída! Reinicie para aplicar todas as mudanças.")
